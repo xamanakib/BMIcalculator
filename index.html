@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>BMI Calculator-by AKIB</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
+    <meta name="description" content="Here I'm presenting the BMI calculator.Calculate BMI by one click.Thanks.Made by AKIB">
+    <link rel="icon" href="img/logo.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body oncontextmenu="return false">
+
+
+
+    <div class="container ct">
+
+        <h1>Calculate your Body Mass Index (BMI)</h1>
+        <div id="input">
+            <select name="weight" id="weight">
+            <option value="4" >kg</option>
+            <option value="5">lbs</option>
+            
+            </select>
+
+            <input type="number" id="weightI" placeholder="Weight" required="">
+            <input type="number" id="heightI" placeholder="Height" required="">
+
+            <select name="height" id="height">
+                
+                <option value="1">inch</option>
+                <option value="2">cm</option>
+                <option value="3">meter</option>
+    
+                </select>
+
+            <div class="button">
+                <button class="btn" id="btnClick">Calculate</button>
+            </div>
+        </div>
+
+        <div class="output">
+            <p id="print"></p>
+        </div>
+        <h2 id="aboutBMI"> Learn About BMI <img src="img/logo.png" alt=""> </h2>
+
+        <table>
+            <tr id="t1">
+                <th>BMI</th>
+                <th>Classification</th>
+                <th>Risk</th>
+            </tr>
+            <tr id="t2">
+                <td> &lt; 18 </td>
+                <td>Underweight</td>
+                <td>Increased</td>
+            </tr>
+            <tr id="t3">
+                <td> 18.5 - 24.9 </td>
+                <td>Normal</td>
+                <td>Normal</td>
+            </tr>
+            <tr id="t4">
+                <td> 25 - 29.9 </td>
+                <td>Overweight</td>
+                <td>Increased</td>
+            </tr>
+            <tr id="t5">
+                <td> 30 - 34.9 </td>
+                <td>Obesity I</td>
+                <td>High</td>
+            </tr>
+            <tr id="t6">
+                <td> 35 - 39.9 </td>
+                <td>Obesity II</td>
+                <td>Very High</td>
+            </tr>
+            <tr id="t7">
+                <td> &gt; 40 </td>
+                <td>Extreme Obesity</td>
+                <td>Extremely High</td>
+            </tr>
+        </table>
+
+        <button class="accordion">What is BMI ?</button>
+        <div class="panel">
+            <p>Body mass index, or BMI, is a measure of body size. It combines a person’s weight with their height. The results of a BMI measurement can give an idea about whether a person has the correct weight for their height.</p>
+        </div>
+
+        <button class="accordion">How BMI is Calculated?</button>
+        <div class="panel">
+            <p>With the metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by 100 to obtain height in meters.</p>
+        </div>
+
+        <footer>
+            <p class="lText">Here I'm presenting the BMI calculator <br>Calculate it by one click.
+                <br><br> <span> Made by&nbsp;<a href="https://xamanakib.github.io/Akibxaman.personal/#s02" target="blank"> AKIB&nbsp;</a></span>
+            </p> <br>
+            <div class="mybutton">
+                <button id="bgnBtn" onclick="promptMe()" class="btn">Source Code</button>
+
+        </footer>
+
+        </div>
+
+
+        <script src="js/easy_background.js"></script>
+        <script src="js/script.js"></script>
+
+        <script>
+            easy_background("body",
+
+                {
+                    slide: ["img/1.webp", "img/2.webp", "img/3.webp", "img/4.webp", "img/5.webp", "img/3.webp"],
+
+                    delay: [5000, 5000, 5000, 5000, 5000, 5000, 5000]
+                }
+
+
+            );
+            //collapse
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+
+
+</body>
+
+</html>
